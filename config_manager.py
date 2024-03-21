@@ -13,7 +13,13 @@ class ConfigManager:
                     'SerialPort': 'COM1',
                     'BaudRate': '9600',
                     'PrintLog': 'False',
-                    'HexLog': 'False'}
+                    'HexLog': 'False',
+                    'EnableHeartbeat': 'False',
+                    'HeartbeatData': '',
+                    'HeartbeatInterval': '0',
+                    'HeartbeatHex':'False',
+                    'AutoReconnect':'True'
+                    }
         for key, value in defaults.items():
             if key not in self.config['DEFAULT']:
                 self.config['DEFAULT'][key] = value
